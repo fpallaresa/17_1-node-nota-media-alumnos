@@ -1,0 +1,32 @@
+{
+  "name": "17_1-node-nota-media-alumnos",
+  "version": "1.0.0",
+  "description": "nota media de los alumnos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fpallaresa/17_1-node-nota-media-alumnos.git"
+  },
+  "keywords": [
+    "nota",
+    "media",
+    "alumnos"
+  ],
+  "author": "francesc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fpallaresa/17_1-node-nota-media-alumnos/issues"
+  },
+  "homepage": "https://github.com/fpallaresa/17_1-node-nota-media-alumnos#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
