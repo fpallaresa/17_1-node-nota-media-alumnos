@@ -5,7 +5,7 @@ const convertJsonToCsv = (jsonData) => {
   let csv = "";
 
   // Encabezados
-  csv += "Nombre;Nota media\n";
+  csv += "Nombre;Nota media\n"; // \n es un salto de línea
 
   // Calculamos la media de cada alumno
   const studentAverages = {};
@@ -18,13 +18,13 @@ const convertJsonToCsv = (jsonData) => {
   });
 
   // Ordenamos las medias de mayor a menor
-  const sortedAverages = Object.entries(studentAverages)
+  const sortedAverages = Object.entries(studentAverages) // convierto en array para manipularlo después
     .map(([name, { sum, count }]) => ({ name, average: sum / count }))
     .sort((a, b) => b.average - a.average);
 
   // Generamos las filas del CSV
   sortedAverages.forEach((student) => {
-    csv += `${student.name};${student.average.toFixed(2)}\n`;
+    csv += `${student.name};${student.average.toFixed(2)}\n`; // toFixed redondea a dos decimales el resultado de la media
   });
 
   return csv;
@@ -32,8 +32,8 @@ const convertJsonToCsv = (jsonData) => {
 
 const filePath = prompt("Introduce la ruta de un fichero JSON: ");
 
-fs.readFile(filePath, (readError, data) => {
-  if (readError) {
+fs.readFile(filePath, (error, data) => {
+  if (error) {
     console.log("Ha ocurrido un error leyendo el fichero");
   } else {
     try {
